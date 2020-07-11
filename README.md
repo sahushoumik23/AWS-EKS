@@ -184,7 +184,7 @@ Then its as usual to run it to get the PVC...![](Imgs/pvc2.png)
 
 <h3>Step-4</h3>
 
-Now we will create Secret for both the Jenkins and MySQL...
+Now we will create Image , Service and Secret for both the Jenkins and MySQL...
 
 <h2>Jenkins</h2>
 
@@ -297,15 +297,23 @@ Now we will create Secret for both the Jenkins and MySQL...
 
 This is the last one...![](Imgs/sqlcmd.png)
 
+For the Service and Secret please refer the document I have made and names them "jservice.yml","jsecret.yml","mservice.yml","msecret.yml"
+
+<h3>Output</h3>
+
 With this all our setup is complete and now we can easily use the Jenkins that we can use via the pods...
 
 ![](Imgs/Output.png)
+
+As EKS is not a free service so I was charged and with my error debug and all it costed me...
+
+![](Imgs/Bill.png)
 
 Thanks for your patience and if you have any doubt then feel free to contact...
 
 WhatsApp:9338455463(No class plzzz).
 
-<h1>Thank You</h1>
+<h1>Thank You.</h1>
 
 
 

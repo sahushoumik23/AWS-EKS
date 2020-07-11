@@ -1,0 +1,13 @@
+apiVersion: v1
+  kind: Service
+  metadata:
+    name: jenkins-mysql
+    labels:
+      app: jenkins
+  spec:
+    ports:
+      - port: 3306
+    selector:
+      app: jenkins
+      tier: mysql
+    clusterIP: None

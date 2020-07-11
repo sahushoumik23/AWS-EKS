@@ -1,0 +1,43 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: jenkins
+  labels:
+    app: jenkinso
+spec:
+  selector:
+    matchLabels:
+      app: jenkinso
+      tier: deploy
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: jenkinso
+        tier: deploy
+    spec:
+      containers:
+      - image: jenkins
+        name: jenkins
+        env:
+        - name: JENKINS_SLAVE_AGENT_PORT
+          valueFrom:
+            secretKeyRef:
+              name: jen
+              key: dcpassword
+        - name: database_connection_database
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: slave
+        ports:
+        - containerPort: 8080
+          name: jenkins
+        volumeMounts:
+        - name: jenkins-ps
+          mountPath: /var/jenkins_home
+      volumes:
+      - name: jenkins-ps
+        persistentVolumeClaim:
+          claimName: jenkins

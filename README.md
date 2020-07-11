@@ -301,6 +301,10 @@ With this all our setup is complete and now we can easily use the Jenkins that w
 
 ![](Imgs/Output.png)
 
+As EKS is not a free service so I was charged and with my error debug and all it costed me...
+
+![](Imgs/Bill.png)
+
 Thanks for your patience and if you have any doubt then feel free to contact...
 
 WhatsApp:9338455463(No class plzzz).

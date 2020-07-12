@@ -56,9 +56,14 @@ In my case it was successful,
 
 ![](Imgs/Subnet.png)
 
+Before moving to the next step,
+
+We make sure that the kubectl is configures by the AWS to help us configure the Kubectl to use the AWS EKS...
+![](Imgs/update.png)
+
 <h3>Step-2</h3>
 
-Cluster is created and also all the other requies stuffs like ENI, Volume and all other are creeated.
+Cluster is created and also all the other requies stuffs like ENI, Volume and all other are created.
 
 It still needs a File System that will give us a NFS fiile system to use with the AWS Cloud Services
 
@@ -137,7 +142,7 @@ After it is done we need to create a provisioner that will allow us to mount the
  
  <h3>Step-4</h3>
  
- Next is to create a Persistent Volume Claim(PVC) that can act as a storage adn act as a permanent storage...
+ Next is to create a Persistent Volume Claim(PVC) that can act as a storage and act as a permanent storage...
  
  We again create a YAML file for that, 
  
@@ -181,6 +186,8 @@ After it is done we need to create a provisioner that will allow us to mount the
           storage: 5Gi
 
 Then its as usual to run it to get the PVC...![](Imgs/pvc2.png)
+
+We need to install efs-utils in all the slave with the public ip and the key that we already have...
 
 <h3>Step-4</h3>
 

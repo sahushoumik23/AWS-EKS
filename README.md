@@ -189,6 +189,8 @@ Then its as usual to run it to get the PVC...![](Imgs/pvc2.png)
 
 We need to install efs-utils in all the slave with the public ip and the key that we already have...
 
+After logging in....![](Imgs/utils.png)
+
 <h3>Step-4</h3>
 
 Now we will create Image , Service and Secret for both the Jenkins and MySQL...
